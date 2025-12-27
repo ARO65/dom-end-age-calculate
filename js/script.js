@@ -6,6 +6,8 @@ const day = document.querySelector("#brihtDay");
 
 const result = document.querySelectorAll(".result>p");
 
+const container = document.querySelector(".container");
+const btton = document.querySelector(".btn");
 const zaman = new Date();
 
 //console.log(zaman.getFullYear());
@@ -22,7 +24,7 @@ function ageCalculate() {
 
   let gun = currentDay - day.value;
   if (gun < 0) {
-    gun += 30;
+    groundColor = gun += 30;
     monht--;
   }
 
@@ -34,4 +36,6 @@ function ageCalculate() {
   result[0].innerText = `age:${yil}`;
   result[1].innerText = `monhts:${ay}`;
   result[2].innerText = `days : ${gun}`;
+
+  document.body.style.backgroundColor = "hsla(51, 9%, 56%, 1.00)";
 }
